@@ -5,12 +5,13 @@
   <p><kin>KLog</kin> is our <term>Win32</term> implementation of <product>*nix</product> <term>syslog</term> daemon to support remote logging of messages from <product>unix</product> servers, routers, terminal servers and other syslog-enabled devices/applications.</p>
   <p/>
   <p><b><i>Enjoy!</i></b></p>
-  <license years="1998, 2002"/>
+  <license years="1998-2004"/>
   <credits/>
  </topic>
  <topic id="News" title="What's New">
-  <newsfor version="1.00 Beta 2" date="August 19th, 2002">
+  <newsfor version="1.1" date="July 11th, 2004">
    <ni>Change of license and opening the source code</ni>
+   <ni>Minor changes in code, mostly bugfixes</ni>
   </newsfor>
  </topic>
  <topic id="Using" title="Using KLog">

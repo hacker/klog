@@ -83,9 +83,9 @@ CAPTION "About KLog"
 FONT 8, "MS Sans Serif"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,7,17,18,20
-    LTEXT           "KLog, Version 1.00 Beta 2",IDC_STATIC,40,16,119,8,
+    LTEXT           "KLog, Version 1.1",IDC_STATIC,40,16,119,8,
                     SS_NOPREFIX
-    LTEXT           "Copyright © 1998,2002 Klever Group",IDC_STATIC,40,31,119,8
+    LTEXT           "Copyright © 1998-2004 Klever Group",IDC_STATIC,40,31,119,8
     DEFPUSHBUTTON   "OK",IDOK,178,13,32,14,WS_GROUP
     PUSHBUTTON      "http://www.klever.net/",IDC_KLEVERNET,125,49,85,14
 END
@@ -804,8 +804,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,2
- PRODUCTVERSION 1,0,0,2
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -822,9 +822,9 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Klever Group (http://www.klever.net/)\0"
             VALUE "FileDescription", "KLog, logging daemon\0"
-            VALUE "FileVersion", "1, 0, 0, 2\0"
+            VALUE "FileVersion", "1, 1, 0, 0\0"
             VALUE "InternalName", "KLOG\0"
-            VALUE "LegalCopyright", "Copyright © 1998, 2002 Klever Group (http://www.klever.net/)\0"
+            VALUE "LegalCopyright", "Copyright © 1998-2004 Klever Group (http://www.klever.net/)\0"
             VALUE "LegalTrademarks", "Klever Group (http://www.klever.net/)\0"
             VALUE "OriginalFilename", "KLOG.EXE\0"
             VALUE "ProductName", "KLog\0"
@@ -1072,7 +1072,7 @@ BEGIN
     IDS_KLOG_EXPORT         "Export to"
     IDS_KLOG_IMPORT         "Import from"
     IDS_KLOG_EXT            ".klg"
-    IDS_REGISTRYKEY         "Klever Group, Inc."
+    IDS_REGISTRYKEY         "Klever Group"
     IDS_KLEVERNET_URL       "http://www.klever.net/"
     IDS_TIP_LOG             "%s [%s] %s.%s"
     IDS_LOGTIMEFORMAT       "%H:%M:%S %B %d"
