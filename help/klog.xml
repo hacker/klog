@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<winhelp>
+ <topic id="About" title="About KLog">
+  <heading scroll="no">Abotu <kin>KLog</kin></heading>
+  <p><kin>KLog</kin> is our <term>Win32</term> implementation of <product>*nix</product> <term>syslog</term> daemon to support remote logging of messages from <product>unix</product> servers, routers, terminal servers and other syslog-enabled devices/applications.</p>
+  <p/>
+  <p><b><i>Enjoy!</i></b></p>
+  <license years="1998, 2002"/>
+  <credits/>
+ </topic>
+ <topic id="News" title="What's New">
+  <newsfor version="1.00 Beta 2" date="August 19th, 2002">
+   <ni>Change of license and opening the source code</ni>
+  </newsfor>
+ </topic>
+ <topic id="Using" title="Using KLog">
+  <heading scroll="no">Using <kin>KLog</kin></heading>
+  <p>When you start <kin>KLog</kin> for the first time it is set to the configuration in which it will silently catch all incoming messages and display them in the log window. Scroll length in initial configuration is set to 15 lines. To learn how to modify this initial configuration you may want to proceed to the <a href="#MainWindow">Main Window</a> section.</p>
+ </topic>
+ <topic id="MainWindow" title="Main Window">
+  <heading scroll="no">Main Window</heading>
+  <p>Essentially, main window is a tabbed collection of 'Destinations'. For each destination you can set the destination itself, events criteria and sound <kin>KLog</kin> will produce when triggered by event matching criteria.</p>
+  <p>Each tab consists of following fields:</p>
+  <ul>
+   <li><b>Short description</b> - short descriptive text appearing on the tab on top of window.</li>
+   <li><b>Log to File/Log to Host/Don't Log radio buttons</b> - let you specify where to forward the events matching criteria below.</li>
+   <li><b>File/Host name</b> - Either file name for logging or host name to forward syslog messages to. (note: host address lookups are performed by blocking call, so if you it takes time to resolve host from it's name <kin>Klog</kin>  may seem to lock up for a while)</li>
+   <li><b>IP/mask pairs list</b> - lets you enter ip address/netmask pairs to specify access list for this destination. If none are entered \endash  all hosts activities are logged into selected destination.</li>
+   <li><b>Facility/priority pattern</b> - may be set in two ways: either by selecting desired facility from the dropdown list and check appropriate priorities and repeat this procedure for every facility or by clicking '<a href="#Pattern">edit logging pattern</a>' button and use the dialog box to edit logging pattern. If you have experience with logging you don't need any explanation about logging facilities/priorities what are they all about and why do you need them. If you don't, then you, probably, don't need <kin>KLog</kin>.</li>
+   <li><b>Sound to play when triggered</b> - whenever event is logged using current destination <kin>KLog</kin> may produce the sound to make you aware of its activity. You can select any preset sound or specify your own wave file.</li>
+   <li><b>Log window</b> - shows recent activity.</li>
+  </ul>
+ </topic>
+ <topic id="Pattern" title="Edit Logging Pattern">
+  <heading scroll="no">Edit Logging Pattern Dialog</heading>
+  <p>Use this tabbed dialog to edit your logging pattern. Logging facilities are separated into three tabs for your convenience. Use top/left rows of buttons to turn a whole bunch of priorities/facilities, bottom/right rows of buttons to toggle the whole column/row, or simply turn on/off individual facility/priority pairs.</p>
+ </topic>
+</winhelp>

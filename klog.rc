@@ -1,0 +1,1150 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\KLog.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\klog.ico"
+IDI_BROWSE              ICON    DISCARDABLE     "shared-data/browse-icon.ico"
+IDI_PREPLAY             ICON    DISCARDABLE     "shared-data/play-icon.ico"
+IDI_KLOG                ICON    DISCARDABLE     "res\\klog-icon.ico"
+IDI_KLOG_TRIGGERED      ICON    DISCARDABLE     "res\\klog-triggered-icon.ico"
+IDI_LOGPATTERN          ICON    DISCARDABLE     "res\\log-pattern.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 217, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KLog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,17,18,20
+    LTEXT           "KLog, Version 1.00 Beta 2",IDC_STATIC,40,16,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 1998,2002 Klever Group",IDC_STATIC,40,31,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,13,32,14,WS_GROUP
+    PUSHBUTTON      "http://www.klever.net/",IDC_KLEVERNET,125,49,85,14
+END
+
+IDD_KLOG_DIALOG DIALOGEX 0, 0, 291, 286
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_CONTEXTHELP | WS_EX_APPWINDOW
+CAPTION "KLog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "Short de&scription:",IDC_STATIC,11,48,78,8,SS_NOTIFY
+    EDITTEXT        IDC_DESC,91,46,187,13,ES_AUTOHSCROLL,WS_EX_STATICEDGE
+    CONTROL         "Log to &File",IDC_TYPE_FILE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,11,60,87,19,WS_EX_STATICEDGE
+    CONTROL         "Log to &Host",IDC_TYPE_HOST,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,101,60,87,19,WS_EX_STATICEDGE
+    CONTROL         "&Don't Log",IDC_TYPE_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,191,60,87,19,WS_EX_STATICEDGE
+    CTEXT           "File &name:",IDC_HOSTORFILE,12,84,40,8
+    EDITTEXT        IDC_HOSTFILE,56,82,201,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,262,82,17,13,0,WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,12,99,13,1
+    LTEXT           "Log data:",IDC_STATIC,27,95,31,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,60,99,218,1
+    LTEXT           "Fa&cility:",IDC_STATIC,19,108,27,8
+    COMBOBOX        IDC_FACILITY,48,106,85,104,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "[::]",IDC_LOGPATTERN,136,106,23,12,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY,WS_EX_STATICEDGE
+    GROUPBOX        " &Priorities: ",IDC_STATIC,162,100,92,53,BS_CENTER | 
+                    BS_NOTIFY,WS_EX_TRANSPARENT
+    CONTROL         "emerg",IDC_EMERG,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    BS_RIGHT | BS_NOTIFY | WS_TABSTOP,169,110,36,10
+    CONTROL         "alert",IDC_ALERT,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    BS_RIGHT | BS_NOTIFY | WS_TABSTOP,169,120,36,10
+    CONTROL         "crit",IDC_CRIT,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    BS_RIGHT | BS_NOTIFY | WS_TABSTOP,169,130,36,10
+    CONTROL         "err",IDC_ERR,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | 
+                    BS_RIGHT | BS_NOTIFY | WS_TABSTOP,169,140,36,10
+    CONTROL         "warn",IDC_WARNING,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    BS_NOTIFY | WS_TABSTOP,209,110,36,10
+    CONTROL         "notice",IDC_NOTICE,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    BS_NOTIFY | WS_TABSTOP,209,120,36,10
+    CONTROL         "info",IDC_INFO,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    BS_NOTIFY | WS_TABSTOP,209,130,36,10
+    CONTROL         "debug",IDC_DEBUG,"Button",BS_AUTOCHECKBOX | BS_LEFT | 
+                    BS_NOTIFY | WS_TABSTOP,209,140,36,10
+    PUSHBUTTON      "all",IDC_ALL,256,105,23,12,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "none",IDC_NONE,256,119,23,12,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "invert",IDC_INVERT,256,132,23,14,BS_NOTIFY,
+                    WS_EX_STATICEDGE
+    LTEXT           "IP:",IDC_STATIC,20,126,10,8,SS_NOTIFY
+    EDITTEXT        IDC_HL_IP,43,124,65,13,ES_AUTOHSCROLL
+    LTEXT           "mask:",IDC_STATIC,20,140,20,8,SS_NOTIFY
+    EDITTEXT        IDC_HL_MASK,43,139,65,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "add",IDC_HL_ADD,111,124,30,12,BS_NOTIFY,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "remove",IDC_HL_REMOVE,111,140,30,12,0,WS_EX_STATICEDGE
+    LISTBOX         IDC_HOSTS,12,154,140,33,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    GROUPBOX        "When &triggered play:",IDC_STATIC,161,154,117,33,0,
+                    WS_EX_TRANSPARENT
+    COMBOBOX        IDC_SOUND,170,167,92,66,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "..",IDC_BROWSESOUND,264,160,12,12,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY,WS_EX_STATICEDGE
+    PUSHBUTTON      "..",IDC_PLAYSOUND,264,173,12,12,BS_ICON | BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY,WS_EX_STATICEDGE
+    LISTBOX         IDC_LOG,7,192,277,87,LBS_USETABSTOPS | LBS_NOSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "&Add",IDC_ADD,7,7,39,18,BS_NOTIFY,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Remove",IDC_REMOVE,48,7,39,18,0,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "E&xit",IDC_EXIT,245,7,39,18,0,WS_EX_CLIENTEDGE
+    CONTROL         "Tab1",IDC_TABS,"SysTabControl32",TCS_TOOLTIPS,7,31,277,
+                    161,WS_EX_CLIENTEDGE
+    CTEXT           "10",IDC_LOGLENGTH,166,11,33,12,SS_NOPREFIX | SS_NOTIFY,
+                    WS_EX_DLGMODALFRAME
+    CONTROL         "Spin4",IDC_LOGLENSPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,189,11,10,12
+    CTEXT           "Log window length:",IDC_STATIC_LOGLENGTH,89,11,77,12,
+                    SS_NOPREFIX | SS_NOTIFY,WS_EX_DLGMODALFRAME
+    DEFPUSHBUTTON   "",IDOK,0,279,6,7,NOT WS_VISIBLE
+    PUSHBUTTON      "",IDCANCEL,285,279,6,7,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Files",IDC_FILES,204,7,39,18,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY | NOT WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+IDD_LOG_UNIX DIALOG DISCARDABLE  0, 0, 394, 143
+STYLE DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Unix"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "emerg",IDC_EMERG_ON,7,20,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "alert",IDC_ALERT_ON,7,33,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "crit",IDC_CRIT_ON,7,46,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "err",IDC_ERR_ON,7,59,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "warn",IDC_WARN_ON,7,72,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "notice",IDC_NOTICE_ON,7,85,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "info",IDC_INFO_ON,7,98,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "debug",IDC_DEBUG_ON,7,111,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "kernel",IDC_KERNEL_ON,32,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "user",IDC_USER_ON,62,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "mail",IDC_MAIL_ON,92,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "daemon",IDC_DAEMON_ON,122,7,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "auth",IDC_AUTH_ON,152,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "syslog",IDC_SYSLOG_ON,182,7,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "lpr",IDC_LPR_ON,212,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "news",IDC_NEWS_ON,242,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "uucp",IDC_UUCP_ON,272,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "cron",IDC_CRON_ON,302,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    CONTROL         "",IDC_KERNEL_EMERG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,21,16,10
+    CONTROL         "",IDC_KERNEL_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,34,16,10
+    CONTROL         "",IDC_KERNEL_CRIT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,47,16,10
+    CONTROL         "",IDC_KERNEL_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,39,60,16,10
+    CONTROL         "",IDC_KERNEL_WARN,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,73,16,10
+    CONTROL         "",IDC_KERNEL_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,86,16,10
+    CONTROL         "",IDC_KERNEL_INFO,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,99,16,10
+    CONTROL         "",IDC_KERNEL_DEBUG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,39,112,16,10
+    CONTROL         "",IDC_USER_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,21,16,10
+    CONTROL         "",IDC_USER_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,34,16,10
+    CONTROL         "",IDC_USER_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,47,16,10
+    CONTROL         "",IDC_USER_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,60,16,10
+    CONTROL         "",IDC_USER_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,73,16,10
+    CONTROL         "",IDC_USER_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,69,86,16,10
+    CONTROL         "",IDC_USER_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,99,16,10
+    CONTROL         "",IDC_USER_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,69,112,16,10
+    CONTROL         "",IDC_MAIL_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,21,16,10
+    CONTROL         "",IDC_MAIL_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,34,16,10
+    CONTROL         "",IDC_MAIL_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,47,16,10
+    CONTROL         "",IDC_MAIL_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,60,16,10
+    CONTROL         "",IDC_MAIL_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,73,16,10
+    CONTROL         "",IDC_MAIL_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,99,86,16,10
+    CONTROL         "",IDC_MAIL_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,99,16,10
+    CONTROL         "",IDC_MAIL_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,99,112,16,10
+    CONTROL         "",IDC_DAEMON_EMERG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,21,16,10
+    CONTROL         "",IDC_DAEMON_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,34,16,10
+    CONTROL         "",IDC_DAEMON_CRIT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,47,16,10
+    CONTROL         "",IDC_DAEMON_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,129,60,16,10
+    CONTROL         "",IDC_DAEMON_WARN,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,73,16,10
+    CONTROL         "",IDC_DAEMON_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,86,16,10
+    CONTROL         "",IDC_DAEMON_INFO,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,99,16,10
+    CONTROL         "",IDC_DAEMON_DEBUG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,129,112,16,10
+    CONTROL         "",IDC_AUTH_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,21,16,10
+    CONTROL         "",IDC_AUTH_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,34,16,10
+    CONTROL         "",IDC_AUTH_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,47,16,10
+    CONTROL         "",IDC_AUTH_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,60,16,10
+    CONTROL         "",IDC_AUTH_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,73,16,10
+    CONTROL         "",IDC_AUTH_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,159,86,16,10
+    CONTROL         "",IDC_AUTH_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,99,16,10
+    CONTROL         "",IDC_AUTH_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,159,112,16,10
+    CONTROL         "",IDC_SYSLOG_EMERG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,21,16,10
+    CONTROL         "",IDC_SYSLOG_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,34,16,10
+    CONTROL         "",IDC_SYSLOG_CRIT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,47,16,10
+    CONTROL         "",IDC_SYSLOG_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,189,60,16,10
+    CONTROL         "",IDC_SYSLOG_WARN,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,73,16,10
+    CONTROL         "",IDC_SYSLOG_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,86,16,10
+    CONTROL         "",IDC_SYSLOG_INFO,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,99,16,10
+    CONTROL         "",IDC_SYSLOG_DEBUG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,189,112,16,10
+    CONTROL         "",IDC_LPR_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,21,16,10
+    CONTROL         "",IDC_LPR_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,34,16,10
+    CONTROL         "",IDC_LPR_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,47,16,10
+    CONTROL         "",IDC_LPR_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,60,16,10
+    CONTROL         "",IDC_LPR_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,73,16,10
+    CONTROL         "",IDC_LPR_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,86,16,10
+    CONTROL         "",IDC_LPR_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,99,16,10
+    CONTROL         "",IDC_LPR_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,219,112,16,10
+    CONTROL         "",IDC_NEWS_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,21,16,10
+    CONTROL         "",IDC_NEWS_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,34,16,10
+    CONTROL         "",IDC_NEWS_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,47,16,10
+    CONTROL         "",IDC_NEWS_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,60,16,10
+    CONTROL         "",IDC_NEWS_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,73,16,10
+    CONTROL         "",IDC_NEWS_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,249,86,16,10
+    CONTROL         "",IDC_NEWS_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,99,16,10
+    CONTROL         "",IDC_NEWS_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,249,112,16,10
+    CONTROL         "",IDC_UUCP_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,21,16,10
+    CONTROL         "",IDC_UUCP_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,34,16,10
+    CONTROL         "",IDC_UUCP_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,47,16,10
+    CONTROL         "",IDC_UUCP_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,60,16,10
+    CONTROL         "",IDC_UUCP_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,73,16,10
+    CONTROL         "",IDC_UUCP_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,279,86,16,10
+    CONTROL         "",IDC_UUCP_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,99,16,10
+    CONTROL         "",IDC_UUCP_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,279,112,16,10
+    CONTROL         "",IDC_CRON_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,21,16,10
+    CONTROL         "",IDC_CRON_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,34,16,10
+    CONTROL         "",IDC_CRON_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,47,16,10
+    CONTROL         "",IDC_CRON_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,60,16,10
+    CONTROL         "",IDC_CRON_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,73,16,10
+    CONTROL         "",IDC_CRON_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,309,86,16,10
+    CONTROL         "",IDC_CRON_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,99,16,10
+    CONTROL         "",IDC_CRON_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,309,112,16,10
+    PUSHBUTTON      "emerg",IDC_EMERG_XOR,362,20,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "alert",IDC_ALERT_XOR,362,33,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "crit",IDC_CRIT_XOR,362,46,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "err",IDC_ERR_XOR,362,59,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "warn",IDC_WARN_XOR,362,72,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "notice",IDC_NOTICE_XOR,362,85,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "info",IDC_INFO_XOR,362,98,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "debug",IDC_DEBUG_XOR,362,111,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "kernel",IDC_KERNEL_XOR,32,124,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "user",IDC_USER_XOR,62,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "mail",IDC_MAIL_XOR,92,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "daemon",IDC_DAEMON_XOR,122,124,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "auth",IDC_AUTH_XOR,152,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "syslog",IDC_SYSLOG_XOR,182,124,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "lpr",IDC_LPR_XOR,212,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "news",IDC_NEWS_XOR,242,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "uucp",IDC_UUCP_XOR,272,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "cron",IDC_CRON_XOR,302,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    LTEXT           "Toggle",IDC_STATIC,363,126,23,8
+    LTEXT           "ON",IDC_STATIC,14,9,12,8
+    PUSHBUTTON      "authpriv",IDC_AUTHPRIV_ON,332,7,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    CONTROL         "",IDC_AUTHPRIV_EMERG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,21,16,10
+    CONTROL         "",IDC_AUTHPRIV_ALERT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,34,16,10
+    CONTROL         "",IDC_AUTHPRIV_CRIT,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,47,16,10
+    CONTROL         "",IDC_AUTHPRIV_ERR,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,61,16,10
+    CONTROL         "",IDC_AUTHPRIV_WARN,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,74,16,10
+    CONTROL         "",IDC_AUTHPRIV_NOTICE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,87,16,10
+    CONTROL         "",IDC_AUTHPRIV_INFO,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,99,16,10
+    CONTROL         "",IDC_AUTHPRIV_DEBUG,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_NOTIFY | WS_TABSTOP,339,112,16,10
+    PUSHBUTTON      "authpriv",IDC_AUTHPRIV_XOR,332,124,30,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+END
+
+IDD_LOG_RESERVED DIALOG DISCARDABLE  0, 0, 394, 143
+STYLE DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Reserved"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "emerg",IDC_EMERG_ON,96,20,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "alert",IDC_ALERT_ON,96,33,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "crit",IDC_CRIT_ON,96,46,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "err",IDC_ERR_ON,96,59,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "warn",IDC_WARN_ON,96,72,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "notice",IDC_NOTICE_ON,96,85,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "info",IDC_INFO_ON,96,98,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "debug",IDC_DEBUG_ON,96,111,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "0",IDC_R0_ON,121,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "1",IDC_R1_ON,151,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "2",IDC_R2_ON,181,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "3",IDC_R3_ON,211,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "4",IDC_R4_ON,241,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    CONTROL         "",IDC_R0_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,21,16,10
+    CONTROL         "",IDC_R0_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,34,16,10
+    CONTROL         "",IDC_R0_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,47,16,10
+    CONTROL         "",IDC_R0_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,60,16,10
+    CONTROL         "",IDC_R0_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,73,16,10
+    CONTROL         "",IDC_R0_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,86,16,10
+    CONTROL         "",IDC_R0_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,99,16,10
+    CONTROL         "",IDC_R0_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,128,112,16,10
+    CONTROL         "",IDC_R1_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,21,16,10
+    CONTROL         "",IDC_R1_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,34,16,10
+    CONTROL         "",IDC_R1_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,47,16,10
+    CONTROL         "",IDC_R1_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,60,16,10
+    CONTROL         "",IDC_R1_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,73,16,10
+    CONTROL         "",IDC_R1_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,86,16,10
+    CONTROL         "",IDC_R1_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,99,16,10
+    CONTROL         "",IDC_R1_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,158,112,16,10
+    CONTROL         "",IDC_R2_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,21,16,10
+    CONTROL         "",IDC_R2_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,34,16,10
+    CONTROL         "",IDC_R2_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,47,16,10
+    CONTROL         "",IDC_R2_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,60,16,10
+    CONTROL         "",IDC_R2_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,73,16,10
+    CONTROL         "",IDC_R2_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,86,16,10
+    CONTROL         "",IDC_R2_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,99,16,10
+    CONTROL         "",IDC_R2_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,188,112,16,10
+    CONTROL         "",IDC_R3_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,21,16,10
+    CONTROL         "",IDC_R3_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,34,16,10
+    CONTROL         "",IDC_R3_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,47,16,10
+    CONTROL         "",IDC_R3_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,60,16,10
+    CONTROL         "",IDC_R3_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,73,16,10
+    CONTROL         "",IDC_R3_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,86,16,10
+    CONTROL         "",IDC_R3_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,99,16,10
+    CONTROL         "",IDC_R3_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,218,112,16,10
+    CONTROL         "",IDC_R4_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,21,16,10
+    CONTROL         "",IDC_R4_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,34,16,10
+    CONTROL         "",IDC_R4_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,47,16,10
+    CONTROL         "",IDC_R4_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,60,16,10
+    CONTROL         "",IDC_R4_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,73,16,10
+    CONTROL         "",IDC_R4_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,86,16,10
+    CONTROL         "",IDC_R4_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,99,16,10
+    CONTROL         "",IDC_R4_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,248,112,16,10
+    PUSHBUTTON      "emerg",IDC_EMERG_XOR,271,20,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "alert",IDC_ALERT_XOR,271,33,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "crit",IDC_CRIT_XOR,271,46,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "err",IDC_ERR_XOR,271,59,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "warn",IDC_WARN_XOR,271,72,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "notice",IDC_NOTICE_XOR,271,85,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "info",IDC_INFO_XOR,271,98,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "debug",IDC_DEBUG_XOR,271,111,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "0",IDC_R0_XOR,121,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "1",IDC_R1_XOR,151,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "2",IDC_R2_XOR,181,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "3",IDC_R3_XOR,211,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "4",IDC_R4_XOR,241,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    LTEXT           "Toggle",IDC_STATIC,272,126,23,8
+    LTEXT           "ON",IDC_STATIC,103,9,12,8
+END
+
+IDD_LOG_LOCAL DIALOG DISCARDABLE  0, 0, 394, 143
+STYLE DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Local"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "emerg",IDC_EMERG_ON,51,20,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "alert",IDC_ALERT_ON,51,33,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "crit",IDC_CRIT_ON,51,46,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "err",IDC_ERR_ON,51,59,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "warn",IDC_WARN_ON,51,72,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "notice",IDC_NOTICE_ON,51,85,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "info",IDC_INFO_ON,51,98,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "debug",IDC_DEBUG_ON,51,111,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "0",IDC_L0_ON,76,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "1",IDC_L1_ON,106,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "2",IDC_L2_ON,136,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "3",IDC_L3_ON,166,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "4",IDC_L4_ON,196,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "5",IDC_L5_ON,226,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "6",IDC_L6_ON,256,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "7",IDC_L7_ON,286,7,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    CONTROL         "",IDC_L0_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,21,16,10
+    CONTROL         "",IDC_L0_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,34,16,10
+    CONTROL         "",IDC_L0_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,47,16,10
+    CONTROL         "",IDC_L0_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,60,16,10
+    CONTROL         "",IDC_L0_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,73,16,10
+    CONTROL         "",IDC_L0_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,86,16,10
+    CONTROL         "",IDC_L0_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,99,16,10
+    CONTROL         "",IDC_L0_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,83,112,16,10
+    CONTROL         "",IDC_L1_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,21,16,10
+    CONTROL         "",IDC_L1_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,34,16,10
+    CONTROL         "",IDC_L1_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,47,16,10
+    CONTROL         "",IDC_L1_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,60,16,10
+    CONTROL         "",IDC_L1_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,73,16,10
+    CONTROL         "",IDC_L1_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,86,16,10
+    CONTROL         "",IDC_L1_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,99,16,10
+    CONTROL         "",IDC_L1_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,113,112,16,10
+    CONTROL         "",IDC_L2_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,21,16,10
+    CONTROL         "",IDC_L2_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,34,16,10
+    CONTROL         "",IDC_L2_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,47,16,10
+    CONTROL         "",IDC_L2_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,60,16,10
+    CONTROL         "",IDC_L2_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,73,16,10
+    CONTROL         "",IDC_L2_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,86,16,10
+    CONTROL         "",IDC_L2_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,99,16,10
+    CONTROL         "",IDC_L2_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,143,112,16,10
+    CONTROL         "",IDC_L3_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,21,16,10
+    CONTROL         "",IDC_L3_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,34,16,10
+    CONTROL         "",IDC_L3_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,47,16,10
+    CONTROL         "",IDC_L3_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,60,16,10
+    CONTROL         "",IDC_L3_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,73,16,10
+    CONTROL         "",IDC_L3_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,86,16,10
+    CONTROL         "",IDC_L3_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,99,16,10
+    CONTROL         "",IDC_L3_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,173,112,16,10
+    CONTROL         "",IDC_L4_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,21,16,10
+    CONTROL         "",IDC_L4_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,34,16,10
+    CONTROL         "",IDC_L4_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,47,16,10
+    CONTROL         "",IDC_L4_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,60,16,10
+    CONTROL         "",IDC_L4_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,73,16,10
+    CONTROL         "",IDC_L4_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,86,16,10
+    CONTROL         "",IDC_L4_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,99,16,10
+    CONTROL         "",IDC_L4_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,203,112,16,10
+    CONTROL         "",IDC_L5_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,21,16,10
+    CONTROL         "",IDC_L5_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,34,16,10
+    CONTROL         "",IDC_L5_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,47,16,10
+    CONTROL         "",IDC_L5_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,60,16,10
+    CONTROL         "",IDC_L5_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,73,16,10
+    CONTROL         "",IDC_L5_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,86,16,10
+    CONTROL         "",IDC_L5_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,99,16,10
+    CONTROL         "",IDC_L5_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,233,112,16,10
+    CONTROL         "",IDC_L6_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,21,16,10
+    CONTROL         "",IDC_L6_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,34,16,10
+    CONTROL         "",IDC_L6_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,47,16,10
+    CONTROL         "",IDC_L6_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,60,16,10
+    CONTROL         "",IDC_L6_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,73,16,10
+    CONTROL         "",IDC_L6_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,86,16,10
+    CONTROL         "",IDC_L6_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,99,16,10
+    CONTROL         "",IDC_L6_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,263,112,16,10
+    CONTROL         "",IDC_L7_EMERG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,21,16,10
+    CONTROL         "",IDC_L7_ALERT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,34,16,10
+    CONTROL         "",IDC_L7_CRIT,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,47,16,10
+    CONTROL         "",IDC_L7_ERR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,60,16,10
+    CONTROL         "",IDC_L7_WARN,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,73,16,10
+    CONTROL         "",IDC_L7_NOTICE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,86,16,10
+    CONTROL         "",IDC_L7_INFO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,99,16,10
+    CONTROL         "",IDC_L7_DEBUG,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    BS_NOTIFY | WS_TABSTOP,293,112,16,10
+    PUSHBUTTON      "emerg",IDC_EMERG_XOR,316,20,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "alert",IDC_ALERT_XOR,316,33,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "crit",IDC_CRIT_XOR,316,46,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "err",IDC_ERR_XOR,316,59,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "warn",IDC_WARN_XOR,316,72,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "notice",IDC_NOTICE_XOR,316,85,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "info",IDC_INFO_XOR,316,98,25,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "debug",IDC_DEBUG_XOR,316,111,25,13,BS_CENTER | 
+                    BS_VCENTER | BS_NOTIFY
+    PUSHBUTTON      "0",IDC_L0_XOR,76,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "1",IDC_L1_XOR,106,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "2",IDC_L2_XOR,136,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "3",IDC_L3_XOR,166,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "4",IDC_L4_XOR,196,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "5",IDC_L5_XOR,226,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "6",IDC_L6_XOR,256,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    PUSHBUTTON      "7",IDC_L7_XOR,286,124,30,13,BS_CENTER | BS_VCENTER | 
+                    BS_NOTIFY
+    LTEXT           "Toggle",IDC_STATIC,317,126,23,8
+    LTEXT           "ON",IDC_STATIC,58,9,12,8
+END
+
+IDD_WARNBLOCKING DIALOGEX 0, 0, 195, 88
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_CLIENTEDGE
+CAPTION "  Blocking call warning"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,67,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,105,67,50,14
+    LTEXT           "WARNING: ",IDC_STATIC,7,7,38,8
+    LTEXT           "All host address lookups are performed in a blocking mode, so KLog may temporarily stop responding until host address is resolved or operation failed.",
+                    IDC_STATIC,46,7,142,35
+    CONTROL         "Enough is said, no need to remind me again. Thanks.",
+                    IDC_WARNBLOCKING,"Button",BS_AUTOCHECKBOX | BS_RIGHT | 
+                    BS_VCENTER | BS_MULTILINE | WS_TABSTOP,7,42,123,22,
+                    WS_EX_STATICEDGE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,2
+ PRODUCTVERSION 1,0,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Klever Group (http://www.klever.net/)\0"
+            VALUE "FileDescription", "KLog, logging daemon\0"
+            VALUE "FileVersion", "1, 0, 0, 2\0"
+            VALUE "InternalName", "KLOG\0"
+            VALUE "LegalCopyright", "Copyright © 1998, 2002 Klever Group (http://www.klever.net/)\0"
+            VALUE "LegalTrademarks", "Klever Group (http://www.klever.net/)\0"
+            VALUE "OriginalFilename", "KLOG.EXE\0"
+            VALUE "ProductName", "KLog\0"
+            VALUE "ProductVersion", "1, 0, 0, 2\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_KLOG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        VERTGUIDE, 12
+        VERTGUIDE, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+        HORZGUIDE, 31
+        HORZGUIDE, 192
+    END
+
+    IDD_LOG_UNIX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        VERTGUIDE, 32
+        VERTGUIDE, 362
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+        HORZGUIDE, 20
+        HORZGUIDE, 124
+    END
+
+    IDD_LOG_RESERVED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        VERTGUIDE, 96
+        VERTGUIDE, 121
+        VERTGUIDE, 271
+        VERTGUIDE, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+        HORZGUIDE, 20
+        HORZGUIDE, 124
+    END
+
+    IDD_LOG_LOCAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        VERTGUIDE, 51
+        VERTGUIDE, 76
+        VERTGUIDE, 316
+        VERTGUIDE, 341
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+        HORZGUIDE, 20
+        HORZGUIDE, 124
+    END
+
+    IDD_WARNBLOCKING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        VERTGUIDE, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 81
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_KLOG_DIALOG DLGINIT
+BEGIN
+    IDC_FACILITY, 0x403, 7, 0
+0x656b, 0x6e72, 0x6c65, "\000" 
+    IDC_FACILITY, 0x403, 5, 0
+0x7375, 0x7265, "\000" 
+    IDC_FACILITY, 0x403, 5, 0
+0x616d, 0x6c69, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6164, 0x6d65, 0x6e6f, "\000" 
+    IDC_FACILITY, 0x403, 5, 0
+0x7561, 0x6874, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x7973, 0x6c73, 0x676f, "\000" 
+    IDC_FACILITY, 0x403, 4, 0
+0x706c, 0x0072, 
+    IDC_FACILITY, 0x403, 5, 0
+0x656e, 0x7377, "\000" 
+    IDC_FACILITY, 0x403, 5, 0
+0x7575, 0x7063, "\000" 
+    IDC_FACILITY, 0x403, 5, 0
+0x7263, 0x6e6f, "\000" 
+    IDC_FACILITY, 0x403, 9, 0
+0x7561, 0x6874, 0x7270, 0x7669, "\000" 
+    IDC_FACILITY, 0x403, 10, 0
+0x6572, 0x6573, 0x7672, 0x6465, 0x0030, 
+    IDC_FACILITY, 0x403, 10, 0
+0x6572, 0x6573, 0x7672, 0x6465, 0x0031, 
+    IDC_FACILITY, 0x403, 10, 0
+0x6572, 0x6573, 0x7672, 0x6465, 0x0032, 
+    IDC_FACILITY, 0x403, 10, 0
+0x6572, 0x6573, 0x7672, 0x6465, 0x0033, 
+    IDC_FACILITY, 0x403, 10, 0
+0x6572, 0x6573, 0x7672, 0x6465, 0x0034, 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x306c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x316c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x326c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x336c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x346c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x356c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x366c, "\000" 
+    IDC_FACILITY, 0x403, 7, 0
+0x6f6c, 0x6163, 0x376c, "\000" 
+    IDC_SOUND, 0x403, 7, 0
+0x6d28, 0x6f65, 0x2977, "\000" 
+    IDC_SOUND, 0x403, 8, 0
+0x6728, 0x616c, 0x7373, 0x0029, 
+    IDC_SOUND, 0x403, 7, 0
+0x6628, 0x6165, 0x2972, "\000" 
+    IDC_SOUND, 0x403, 7, 0
+0x6b28, 0x6369, 0x296b, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDW_SOUND_MEOW          WAVE    DISCARDABLE     "res\\meow.wav"
+IDW_SOUND_GLASS         WAVE    DISCARDABLE     "res\\glass.wav"
+IDW_SOUND_FEAR          WAVE    DISCARDABLE     "res\\fear.wav"
+IDW_SOUND_KICK          WAVE    DISCARDABLE     "res\\kick.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BACKGROUND          BITMAP  DISCARDABLE     "shared-data/klever-background.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDD_KLOG_DIALOG MENU DISCARDABLE 
+BEGIN
+    POPUP "Files"
+    BEGIN
+        MENUITEM "&Export",                     ID_FILES_EXPORT
+        MENUITEM "&Import",                     ID_FILES_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "&Reset",                      ID_FILES_RESET
+    END
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "&Export settings",            ID_FILES_EXPORT
+        MENUITEM "&Import settings",            ID_FILES_IMPORT
+        MENUITEM "&Reset configuration",        ID_FILES_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "&Show KLog Window",           ID_TRAY_SHOWKLOGWINDOW
+        MENUITEM SEPARATOR
+        MENUITEM "&Help",                       ID_TRAY_HELP
+        MENUITEM "&About KLog",                 ID_TRAY_ABOUTKLOG
+        MENUITEM "E&xit",                       ID_TRAY_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About KLog..."
+    IDS_LOGTO_HOST          "Host &name:"
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    IDS_LOGTO_FILE          "File &name:"
+    IDS_SOUND_MEOW          "(meow)"
+    IDS_SOUND_GLASS         "(glass)"
+    IDS_SOUND_FEAR          "(fear)"
+    IDS_SOUND_KICK          "(kick)"
+    IDS_WAVFILTER           "Wave files (*.wav)|*.wav|All files (*.*)|*.*|"
+    IDS_SOUND_SELECT        "Select sound"
+    IDS_LOGFILTER           "Log files (*.log)|*.log|All files (*.*)|*.*|"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILES_EXPORT         "Save current configuration."
+    ID_FILES_IMPORT         "Load configuration from file"
+    ID_FILES_RESET          "Reset to initial configuration"
+    ID_TRAY_SHOWKLOGWINDOW  "Show/Hide KLog wondow"
+    ID_TRAY_HELP            "Help"
+    ID_TRAY_ABOUTKLOG       "About KLog"
+    ID_TRAY_EXIT            "Terminate KLog"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOG_SELECT          "Log To"
+    IDS_LOG_EXT             ".log"
+    IDS_KLOGFILTER          "KLog files (*.klg)|*.klg|All files (*.*)|*.*|"
+    IDS_KLOG_EXPORT         "Export to"
+    IDS_KLOG_IMPORT         "Import from"
+    IDS_KLOG_EXT            ".klg"
+    IDS_REGISTRYKEY         "Klever Group, Inc."
+    IDS_KLEVERNET_URL       "http://www.klever.net/"
+    IDS_TIP_LOG             "%s [%s] %s.%s"
+    IDS_LOGTIMEFORMAT       "%H:%M:%S %B %d"
+    IDS_LOGPATTERN_TITLE    "Logging pattern"
+    IDS_LOGFILETIMEFORMAT   "%c "
+    IDS_TIP_FACILITY_ON     "Turn on logging for given facility"
+    IDS_TIP_FACILITY_XOR    "Invert logging for given facility"
+    IDS_TIP_PRIORITY_ON     "Turn on all logging for given priority"
+    IDS_TIP_PRIORITY_XOR    "Invert logging for given priority"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ADD                 "Add new logging destination"
+    IDC_REMOVE              "Remove logging destination"
+    IDC_EXIT                "Terminate KLog"
+    IDC_TYPE_FILE           "Log to file on disk"
+    IDC_TYPE_HOST           "Log to remote host"
+    IDC_TYPE_NONE           "Don't log anywhere but log window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_LOGLENGTH           "Number of lines to keep in log window"
+    IDC_FILES               "Import/Export KLog settings"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_LOG                 "Recent activity"
+    IDC_HOSTS               "Hosts access list for given destination"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_LOGPATTERN          "Edit logging pattern"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGFILEPRIFACEFORMAT "(%s.%s) "
+    IDS_LOGFILESOURCEFORMAT "[%s] "
+    IDS_LOGHOSTSOURCEFORMAT "[%s] "
+    IDS_MSG_LOOKUPFAILED    "Host address lookup for '%s' failed."
+    IDS_MSG_FAILEDTOEXPORT  "Unable to create file."
+    IDS_MSG_FAILEDTOIMPORT  "Unable to read file."
+    IDS_MSG_FAILEDTOSTORE   "Database is too big to store as system default."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\klog.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

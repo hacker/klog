@@ -1,0 +1,10 @@
+#ifdef	STATI_K
+klog.ex_ rcdata discardable "../releast/klog.ex_"
+#else
+klog.ex_ rcdata discardable "../release/klog.ex_"
+#endif
+klog.cn_ rcdata discardable "../release/klog.cn_"
+klog.hl_ rcdata discardable "../release/klog.hl_"
+#ifdef K_ANNED
+mfc42.dl_ rcdata discardable "../redist/mfc42.dl_"
+#endif

@@ -1,0 +1,12 @@
+about-date	klog.rc	/LTEXT\s\+"Copyright /;"	kind:d
+about-version	klog.rc	/LTEXT\s\+"KLog, Version /;"	kind:v
+help-license-date	./help/klog.xml	/<license\s/;"	kind:d
+help-news	./help/klog.xml	/<newsfor\s/
+install-version	./install/install.cpp	/^#define\s\+KINAME\s\+"/;"	kind:v
+install-vsinfo-date	install/install.rc	/^\s\+VALUE\s\+"LegalCopyright",/;"	kind:d
+install-vsinfo-numeric-version	install/install.rc	/^\s\+FILEVERSION\s\+/;"	kind:v
+install-vsinfo-string-version	install/install.rc	/^\s\+VALUE\s\+"FileVersion",/;"	kind:v
+license-date	COPYING	:1;"	kind:d
+vsinfo-date	klog.rc	/VALUE\s\+"LegalCopyright",/;"	kind:d
+vsinfo-numeric-version	klog.rc	/^\s\+FILEVERSION\s\+/;"	kind:v
+vsinfo-string-version	klog.rc	/^\s\+VALUE\s\+"FileVersion",/;"	kind:v
