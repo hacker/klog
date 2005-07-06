@@ -72,7 +72,7 @@ CLEAN :
 	-@erase "$(INTDIR)\klog.hlp"
 	-@erase "$(INTDIR)\KLog.obj"
 	-@erase "$(INTDIR)\klog.pch"
-	-@erase "$(INTDIR)\KLog.res"
+	-@erase "$(INTDIR)\klog.res"
 	-@erase "$(INTDIR)\KLogDlg.obj"
 	-@erase "$(INTDIR)\LogPattern.obj"
 	-@erase "$(INTDIR)\LogPatternLocal.obj"
@@ -99,7 +99,7 @@ CPP_SBRS=.\.
 MTL_PROJ=/nologo /D "NDEBUG" /win32 
 # ADD BASE RSC /l 0x409 /d "NDEBUG" /d "_AFXDLL"
 # ADD RSC /l 0x409 /d "NDEBUG" /d "_AFXDLL"
-RSC_PROJ=/l 0x409 /fo"$(INTDIR)/KLog.res" /d "NDEBUG" /d "_AFXDLL" 
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)/klog.res" /d "NDEBUG" /d "_AFXDLL" 
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -113,7 +113,7 @@ LINK32_FLAGS=/nologo /subsystem:windows /incremental:no\
  /pdb:"$(OUTDIR)/klog.pdb" /machine:I386 /out:"$(OUTDIR)/klog.exe" 
 LINK32_OBJS= \
 	"$(INTDIR)\KLog.obj" \
-	"$(INTDIR)\KLog.res" \
+	"$(INTDIR)\klog.res" \
 	"$(INTDIR)\KLogDlg.obj" \
 	"$(INTDIR)\LogPattern.obj" \
 	"$(INTDIR)\LogPatternLocal.obj" \
@@ -169,7 +169,7 @@ CLEAN :
 	-@erase "$(INTDIR)\klog.hlp"
 	-@erase "$(INTDIR)\KLog.obj"
 	-@erase "$(INTDIR)\klog.pch"
-	-@erase "$(INTDIR)\KLog.res"
+	-@erase "$(INTDIR)\klog.res"
 	-@erase "$(INTDIR)\KLogDlg.obj"
 	-@erase "$(INTDIR)\LogPattern.obj"
 	-@erase "$(INTDIR)\LogPatternLocal.obj"
@@ -201,7 +201,7 @@ CPP_SBRS=.\.
 MTL_PROJ=/nologo /D "_DEBUG" /win32 
 # ADD BASE RSC /l 0x409 /d "_DEBUG" /d "_AFXDLL"
 # ADD RSC /l 0x409 /d "_DEBUG" /d "_AFXDLL"
-RSC_PROJ=/l 0x409 /fo"$(INTDIR)/KLog.res" /d "_DEBUG" /d "_AFXDLL" 
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)/klog.res" /d "_DEBUG" /d "_AFXDLL" 
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -215,7 +215,7 @@ LINK32_FLAGS=/nologo /subsystem:windows /incremental:yes\
  /pdb:"$(OUTDIR)/klog.pdb" /debug /machine:I386 /out:"$(OUTDIR)/klog.exe" 
 LINK32_OBJS= \
 	"$(INTDIR)\KLog.obj" \
-	"$(INTDIR)\KLog.res" \
+	"$(INTDIR)\klog.res" \
 	"$(INTDIR)\KLogDlg.obj" \
 	"$(INTDIR)\LogPattern.obj" \
 	"$(INTDIR)\LogPatternLocal.obj" \
@@ -261,8 +261,8 @@ OutDir=.\Releast
 TargetName=klog
 # End Custom Macros
 
-ALL : "$(OUTDIR)\klog.exe" "$(OUTDIR)\klog.hlp" "$(OUTDIR)\klog.cnt"\
- "$(OUTDIR)\klog.hl_" "$(OUTDIR)\klog.cn_" "$(OUTDIR)\klog.ex_"
+ALL : "$(OUTDIR)\klog.exe" "$(OUTDIR)\klog.ex_" "$(OUTDIR)\klog.hlp"\
+ "$(OUTDIR)\klog.cnt" "$(OUTDIR)\klog.hl_" "$(OUTDIR)\klog.cn_"
 
 CLEAN : 
 	-@erase "$(INTDIR)\klog.cn_"
@@ -271,7 +271,7 @@ CLEAN :
 	-@erase "$(INTDIR)\klog.hlp"
 	-@erase "$(INTDIR)\KLog.obj"
 	-@erase "$(INTDIR)\klog.pch"
-	-@erase "$(INTDIR)\KLog.res"
+	-@erase "$(INTDIR)\klog.res"
 	-@erase "$(INTDIR)\KLogDlg.obj"
 	-@erase "$(INTDIR)\LogPattern.obj"
 	-@erase "$(INTDIR)\LogPatternLocal.obj"
@@ -298,7 +298,7 @@ CPP_SBRS=.\.
 MTL_PROJ=/nologo /D "NDEBUG" /win32 
 # ADD BASE RSC /l 0x409 /d "NDEBUG" /d "_AFXDLL"
 # ADD RSC /l 0x409 /d "NDEBUG"
-RSC_PROJ=/l 0x409 /fo"$(INTDIR)/KLog.res" /d "NDEBUG" 
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)/klog.res" /d "NDEBUG" 
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -312,7 +312,7 @@ LINK32_FLAGS=/nologo /subsystem:windows /incremental:no\
  /pdb:"$(OUTDIR)/klog.pdb" /machine:I386 /out:"$(OUTDIR)/klog.exe" 
 LINK32_OBJS= \
 	"$(INTDIR)\KLog.obj" \
-	"$(INTDIR)\KLog.res" \
+	"$(INTDIR)\klog.res" \
 	"$(INTDIR)\KLogDlg.obj" \
 	"$(INTDIR)\LogPattern.obj" \
 	"$(INTDIR)\LogPatternLocal.obj" \
@@ -769,21 +769,21 @@ DEP_RSC_KLOG_R=\
 !IF  "$(CFG)" == "KLog - Win32 Release"
 
 
-"$(INTDIR)\KLog.res" : $(SOURCE) $(DEP_RSC_KLOG_R) "$(INTDIR)"
+"$(INTDIR)\klog.res" : $(SOURCE) $(DEP_RSC_KLOG_R) "$(INTDIR)"
    $(RSC) $(RSC_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "KLog - Win32 Debug"
 
 
-"$(INTDIR)\KLog.res" : $(SOURCE) $(DEP_RSC_KLOG_R) "$(INTDIR)"
+"$(INTDIR)\klog.res" : $(SOURCE) $(DEP_RSC_KLOG_R) "$(INTDIR)"
    $(RSC) $(RSC_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "KLog - Win32 Static Release"
 
 
-"$(INTDIR)\KLog.res" : $(SOURCE) $(DEP_RSC_KLOG_R) "$(INTDIR)"
+"$(INTDIR)\klog.res" : $(SOURCE) $(DEP_RSC_KLOG_R) "$(INTDIR)"
    $(RSC) $(RSC_PROJ) $(SOURCE)
 
 
@@ -1195,35 +1195,32 @@ DEP_RSC_INSTA=\
 # Begin Source File
 
 SOURCE=.\Install\install.cpp
-DEP_CPP_INSTAL=\
-	".\shared-code\install.h"\
-	
 
 !IF  "$(CFG)" == "Install - Win32 Debug"
 
 
-"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "Install - Win32 Pure"
 
 
-"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "Install - Win32 Canned"
 
 
-"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "Install - Win32 Static"
 
 
-"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 

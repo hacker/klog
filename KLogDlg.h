@@ -105,6 +105,7 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CKLogDlg)
 	enum { IDD = IDD_KLOG_DIALOG };
+	CButton	m_CancelCtl;
 	CButton	m_LogPatternCtl;
 	CButton	m_FilesCtl;
 	CSpinButtonCtrl	m_LogLenSpinCtl;
@@ -193,6 +194,8 @@ protected:
 	afx_msg void OnTrayShowklogwindow();
 	afx_msg void OnWindowPosChanging(WINDOWPOS FAR* lpwndpos);
 	afx_msg void OnLogpattern();
+	afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

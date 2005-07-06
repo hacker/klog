@@ -1,7 +1,7 @@
 #include "resource.h"
 #include "../shared-code/install.h"
 
-#define	KINAME	"KLog 1.1"
+#define	KINAME	"KLog 1.1.1-trunk"
 #define SKINAME	"KLog"
 
 BOOL Install(void)

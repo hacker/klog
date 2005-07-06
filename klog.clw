@@ -40,7 +40,7 @@ ImplementationFile=KLogDlg.cpp
 Filter=W
 BaseClass=CDialog
 VirtualFilter=dWC
-LastObject=IDC_HL_ADD
+LastObject=IDC_LOG
 
 [CLS:CAboutDlg]
 Type=0

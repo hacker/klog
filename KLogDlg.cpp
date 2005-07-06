@@ -102,6 +102,7 @@ void CKLogDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CKLogDlg)
+	DDX_Control(pDX, IDCANCEL, m_CancelCtl);
 	DDX_Control(pDX, IDC_LOGPATTERN, m_LogPatternCtl);
 	DDX_Control(pDX, IDC_FILES, m_FilesCtl);
 	DDX_Control(pDX, IDC_LOGLENSPIN, m_LogLenSpinCtl);
@@ -181,6 +182,7 @@ BEGIN_MESSAGE_MAP(CKLogDlg, CDialog)
 	ON_COMMAND(ID_TRAY_SHOWKLOGWINDOW, OnTrayShowklogwindow)
 	ON_WM_WINDOWPOSCHANGING()
 	ON_BN_CLICKED(IDC_LOGPATTERN, OnLogpattern)
+	ON_WM_GETMINMAXINFO()
 	ON_BN_CLICKED(IDC_CRIT, OnPriority)
 	ON_BN_CLICKED(IDC_DEBUG, OnPriority)
 	ON_BN_CLICKED(IDC_EMERG, OnPriority)
@@ -190,6 +192,7 @@ BEGIN_MESSAGE_MAP(CKLogDlg, CDialog)
 	ON_BN_CLICKED(IDC_WARNING, OnPriority)
 	ON_BN_CLICKED(IDC_TYPE_HOST, OnLogto)
 	ON_BN_CLICKED(IDC_TYPE_NONE, OnLogto)
+	ON_WM_SIZE()
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -1364,4 +1367,31 @@ void CLogger::LookupHost(CKLogDlg *daddy)
 					MessageBeep(MB_ICONHAND);
 			}
 		}
+}
+
+void CKLogDlg::OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI) 
+{
+	CDialog::OnGetMinMaxInfo(lpMMI);
+	WINDOWPLACEMENT wp;
+	if(IsWindow(m_CancelCtl.m_hWnd) && m_CancelCtl.GetWindowPlacement(&wp)) {
+		CRect wr; GetWindowRect(wr);
+		CRect cr; GetClientRect(cr);
+		CSize ncs = (wr-cr).Size();
+		CRect ctlr = wp.rcNormalPosition;
+		CSize corner = ctlr.BottomRight()+ncs;
+		lpMMI->ptMaxTrackSize.x = lpMMI->ptMinTrackSize.x = corner.cx;
+		lpMMI->ptMinTrackSize.y = corner.cy;
+	}
+}
+
+void CKLogDlg::OnSize(UINT nType, int cx, int cy) 
+{
+	CDialog::OnSize(nType, cx, cy);
+	if(!IsWindow(m_Log.m_hWnd))
+		return;
+	WINDOWPLACEMENT lp; m_Log.GetWindowPlacement(&lp);
+	CRect lr = lp.rcNormalPosition;
+	lr.bottom = cy-2;
+	CSize ls = lr.Size();
+	m_Log.SetWindowPos(0,0,0,ls.cx,ls.cy,SWP_NOACTIVATE|SWP_NOMOVE|SWP_NOOWNERZORDER|SWP_NOZORDER);
 }

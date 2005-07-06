@@ -50,7 +50,7 @@ BEGIN
     "LANGUAGE 9, 1\r\n"
     "#pragma code_page(1252)\r\n"
     "#endif\r\n"
-    "#include ""res\\KLog.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""res\\klog.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
     "#include ""afxres.rc""         // Standard components\r\n"
     "#endif\0"
 END
@@ -83,18 +83,18 @@ CAPTION "About KLog"
 FONT 8, "MS Sans Serif"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,7,17,18,20
-    LTEXT           "KLog, Version 1.1",IDC_STATIC,40,16,119,8,
-                    SS_NOPREFIX
-    LTEXT           "Copyright © 1998-2004 Klever Group",IDC_STATIC,40,31,119,8
+    LTEXT           "KLog, Version 1.1.1-trunk",IDC_STATIC,40,16,119,8,SS_NOPREFIX
+    LTEXT           "Copyright © 1998-2005 Klever Group",IDC_STATIC,40,31,
+                    119,8
     DEFPUSHBUTTON   "OK",IDOK,178,13,32,14,WS_GROUP
     PUSHBUTTON      "http://www.klever.net/",IDC_KLEVERNET,125,49,85,14
 END
 
-IDD_KLOG_DIALOG DIALOGEX 0, 0, 291, 286
-STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+IDD_KLOG_DIALOG DIALOGEX 0, 0, 293, 286
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 EXSTYLE WS_EX_CLIENTEDGE | WS_EX_CONTEXTHELP | WS_EX_APPWINDOW
 CAPTION "KLog"
-FONT 8, "MS Sans Serif", 0, 0, 0x1
+FONT 8, "MS Sans Serif"
 BEGIN
     CTEXT           "Short de&scription:",IDC_STATIC,11,48,78,8,SS_NOTIFY
     EDITTEXT        IDC_DESC,91,46,187,13,ES_AUTOHSCROLL,WS_EX_STATICEDGE
@@ -155,13 +155,13 @@ BEGIN
                     BS_VCENTER | BS_NOTIFY,WS_EX_STATICEDGE
     PUSHBUTTON      "..",IDC_PLAYSOUND,264,173,12,12,BS_ICON | BS_CENTER | 
                     BS_VCENTER | BS_NOTIFY,WS_EX_STATICEDGE
-    LISTBOX         IDC_LOG,7,192,277,87,LBS_USETABSTOPS | LBS_NOSEL | 
+    LISTBOX         IDC_LOG,7,192,279,87,LBS_USETABSTOPS | LBS_NOSEL | 
                     WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_DLGMODALFRAME | 
                     WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
     PUSHBUTTON      "&Add",IDC_ADD,7,7,39,18,BS_NOTIFY,WS_EX_CLIENTEDGE
     PUSHBUTTON      "&Remove",IDC_REMOVE,48,7,39,18,0,WS_EX_CLIENTEDGE
-    PUSHBUTTON      "E&xit",IDC_EXIT,245,7,39,18,0,WS_EX_CLIENTEDGE
-    CONTROL         "Tab1",IDC_TABS,"SysTabControl32",TCS_TOOLTIPS,7,31,277,
+    PUSHBUTTON      "E&xit",IDC_EXIT,247,7,39,18,0,WS_EX_CLIENTEDGE
+    CONTROL         "Tab1",IDC_TABS,"SysTabControl32",TCS_TOOLTIPS,7,31,279,
                     161,WS_EX_CLIENTEDGE
     CTEXT           "10",IDC_LOGLENGTH,166,11,33,12,SS_NOPREFIX | SS_NOTIFY,
                     WS_EX_DLGMODALFRAME
@@ -171,7 +171,7 @@ BEGIN
     CTEXT           "Log window length:",IDC_STATIC_LOGLENGTH,89,11,77,12,
                     SS_NOPREFIX | SS_NOTIFY,WS_EX_DLGMODALFRAME
     DEFPUSHBUTTON   "",IDOK,0,279,6,7,NOT WS_VISIBLE
-    PUSHBUTTON      "",IDCANCEL,285,279,6,7,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "",IDCANCEL,286,279,6,7,NOT WS_VISIBLE | WS_DISABLED
     PUSHBUTTON      "Files",IDC_FILES,204,7,39,18,BS_CENTER | BS_VCENTER | 
                     BS_NOTIFY | NOT WS_TABSTOP,WS_EX_CLIENTEDGE
 END
@@ -804,7 +804,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,1,0,0
+ FILEVERSION 1,1,1,0
  PRODUCTVERSION 1,1,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -822,13 +822,13 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Klever Group (http://www.klever.net/)\0"
             VALUE "FileDescription", "KLog, logging daemon\0"
-            VALUE "FileVersion", "1, 1, 0, 0\0"
+            VALUE "FileVersion", "1, 1, 1, 0\0"
             VALUE "InternalName", "KLOG\0"
-            VALUE "LegalCopyright", "Copyright © 1998-2004 Klever Group (http://www.klever.net/)\0"
+            VALUE "LegalCopyright", "Copyright © 1998-2005 Klever Group (http://www.klever.net/)\0"
             VALUE "LegalTrademarks", "Klever Group (http://www.klever.net/)\0"
             VALUE "OriginalFilename", "KLOG.EXE\0"
             VALUE "ProductName", "KLog\0"
-            VALUE "ProductVersion", "1, 0, 0, 2\0"
+            VALUE "ProductVersion", "1, 1, 1, 0\0"
         END
     END
     BLOCK "VarFileInfo"
@@ -859,7 +859,7 @@ BEGIN
     IDD_KLOG_DIALOG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 284
+        RIGHTMARGIN, 286
         VERTGUIDE, 12
         VERTGUIDE, 278
         TOPMARGIN, 7
