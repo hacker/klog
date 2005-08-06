@@ -1,7 +1,8 @@
 #include "resource.h"
 #include "../shared-code/install.h"
 
-#define	KINAME	"KLog 1.1.1-trunk"
+#define VERSION "1.2"
+#define	KINAME	"KLog " VERSION
 #define SKINAME	"KLog"
 
 BOOL Install(void)
@@ -63,6 +64,12 @@ FILE* inf=CREATE_INF_FILE(path,SKINAME ".INF");
 	INF_MENU_ITEM(inf,1,SKINAME);
 	fclose(inf);
 	REG_UNINSTALL_COMMAND(SKINAME,"Klever " KINAME,shortPath,SKINAME ".INF","Uninstall");
+    REG_UNINSTALL_ICON(SKINAME,path,SKINAME ".exe",0);
+    REG_UNINSTALL_COMMENT(SKINAME,"Klever " KINAME);
+    REG_UNINSTALL_VERSION(SKINAME,VERSION);
+    REG_UNINSTALL_LOCATION(SKINAME,path);
+    REG_UNINSTALL_PUBLISHER(SKINAME,"Klever Group");
+    REG_UNINSTALL_URLS(SKINAME,"http://www.klever.net/","http://kin.klever.net/klog/");
 
 	MessageBox(NULL,KINAME " installed successfully, you may now run it from 'Programs/Klever Group' menu, move it to your Startup group or remove it using Control Panel Add/Remove Programs applet."," Rejoice!",MB_ICONINFORMATION|MB_OK);
 

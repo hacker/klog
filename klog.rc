@@ -83,7 +83,7 @@ CAPTION "About KLog"
 FONT 8, "MS Sans Serif"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,7,17,18,20
-    LTEXT           "KLog, Version 1.1.1-trunk",IDC_STATIC,40,16,119,8,SS_NOPREFIX
+    LTEXT           "KLog, Version 1.2",IDC_STATIC,40,16,119,8,SS_NOPREFIX
     LTEXT           "Copyright © 1998-2005 Klever Group",IDC_STATIC,40,31,
                     119,8
     DEFPUSHBUTTON   "OK",IDOK,178,13,32,14,WS_GROUP
@@ -804,8 +804,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,1,1,0
- PRODUCTVERSION 1,1,0,0
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 1,2,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -822,13 +822,13 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Klever Group (http://www.klever.net/)\0"
             VALUE "FileDescription", "KLog, logging daemon\0"
-            VALUE "FileVersion", "1, 1, 1, 0\0"
+            VALUE "FileVersion", "1, 2, 0, 0\0"
             VALUE "InternalName", "KLOG\0"
             VALUE "LegalCopyright", "Copyright © 1998-2005 Klever Group (http://www.klever.net/)\0"
             VALUE "LegalTrademarks", "Klever Group (http://www.klever.net/)\0"
             VALUE "OriginalFilename", "KLOG.EXE\0"
             VALUE "ProductName", "KLog\0"
-            VALUE "ProductVersion", "1, 1, 1, 0\0"
+            VALUE "ProductVersion", "1, 2, 0, 0\0"
         END
     END
     BLOCK "VarFileInfo"

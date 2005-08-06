@@ -1198,29 +1198,41 @@ SOURCE=.\Install\install.cpp
 
 !IF  "$(CFG)" == "Install - Win32 Debug"
 
+DEP_CPP_INSTAL=\
+	".\shared-code\install.h"\
+	
 
-"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "Install - Win32 Pure"
 
+DEP_CPP_INSTAL=\
+	".\shared-code\install.h"\
+	
 
-"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "Install - Win32 Canned"
 
+DEP_CPP_INSTAL=\
+	".\shared-code\install.h"\
+	
 
-"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
 !ELSEIF  "$(CFG)" == "Install - Win32 Static"
 
+DEP_CPP_INSTAL=\
+	".\shared-code\install.h"\
+	
 
-"$(INTDIR)\install.obj" : $(SOURCE) "$(INTDIR)"
+"$(INTDIR)\install.obj" : $(SOURCE) $(DEP_CPP_INSTAL) "$(INTDIR)"
    $(CPP) $(CPP_PROJ) $(SOURCE)
 
 
